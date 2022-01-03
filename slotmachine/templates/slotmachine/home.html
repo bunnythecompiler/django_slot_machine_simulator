@@ -1,0 +1,20 @@
+{% extends 'slotmachine/base.html' %}
+{% block content %}
+    <h1>
+        welcome to the slot machine simulator
+    </h1>
+    <div>
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="amount" placeholder="enter the amount you want bet on">
+            <button type="submit" class="btn btn-primary">Play</button>
+
+
+        </form>
+        <h1>winning details</h1>
+        <h1>{{won}}</h1>
+        <h1>{{lost}}</h1>
+        <h1>{{ refund }}</h1>
+        
+    </div>
+{% endblock content %}
